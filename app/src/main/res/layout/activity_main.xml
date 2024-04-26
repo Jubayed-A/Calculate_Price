@@ -48,7 +48,6 @@
         tools:itemCount="2"
         tools:listitem="@layout/custom_item" />
 
-
     <Button
         android:id="@+id/btnCalculated"
         android:layout_width="220dp"
@@ -75,6 +74,5 @@
         android:src="@drawable/ic_add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
