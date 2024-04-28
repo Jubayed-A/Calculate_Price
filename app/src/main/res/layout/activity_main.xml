@@ -11,7 +11,7 @@
         android:id="@+id/textCardView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,8 +34,8 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rvCardView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
@@ -45,8 +45,18 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textCardView"
-        tools:itemCount="2"
-        tools:listitem="@layout/custom_item" />
+        app:strokeColor="#4C8BC6"
+        app:strokeWidth="4dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="2"
+            tools:listitem="@layout/custom_item_calculate" />
+
+    </com.google.android.material.card.MaterialCardView>
 
     <Button
         android:id="@+id/btnCalculated"
@@ -67,12 +77,12 @@
         android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="112dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="#4C8BC6"
         android:clickable="true"
         android:src="@drawable/ic_add"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvCardView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
