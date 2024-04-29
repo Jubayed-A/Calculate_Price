@@ -17,12 +17,12 @@
         android:layout_marginBottom="10dp">
 
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mainCardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             app:cardCornerRadius="15dp"
             app:cardElevation="5dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -134,6 +134,7 @@
 
                         </TableRow>
 
+
                     </TableLayout>
 
                 </com.google.android.material.card.MaterialCardView>
@@ -141,6 +142,23 @@
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
+
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mainCardView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Back"
+            android:backgroundTint="@color/stock"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:padding="10dp"/>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
