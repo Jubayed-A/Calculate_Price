@@ -20,8 +20,6 @@ class PriceMenuActivity : AppCompatActivity() {
         val tableLayout = findViewById<TableLayout>(R.id.tableLayout)
         val btnBack = findViewById<Button>(R.id.btnBack)
 
-
-
         // Retrieve all item data from the intent (using Double for weight)
         val allItemNames = intent.getStringArrayExtra("allItemNames") ?: emptyArray()
         val allItemKg = intent.getIntArrayExtra("allItemKg") ?: IntArray(0)
@@ -34,20 +32,26 @@ class PriceMenuActivity : AppCompatActivity() {
         for (i in allItemNames.indices) {
             val itemName = allItemNames[i]
             val totalKg = allItemKg[i] + (allItemGram[i] / 1000.0) // Combine kg and gram
-            val pricePerKg = allItemPricePerKg[i]// Assuming constant price per Kg (modify if needed)
+            val pricePerKg =
+                allItemPricePerKg[i]// Assuming constant price per Kg (modify if needed)
             val itemTotalPrice = allItemTotalPrice[i]
 
             val tableRow = LayoutInflater.from(this).inflate(R.layout.table_row, null) as TableRow
             tableRow.findViewById<TextView>(R.id.nameTextView).text = itemName
-            tableRow.findViewById<TextView>(R.id.totalKgTextView).text = String.format("%.2f", totalKg) // Format with 2 decimal places
-            tableRow.findViewById<TextView>(R.id.kgPriceTextView).text = String.format("৳ %.2f", pricePerKg)
-            tableRow.findViewById<TextView>(R.id.totalPriceTextView).text = String.format("৳ %.2f", itemTotalPrice)
+            tableRow.findViewById<TextView>(R.id.totalKgTextView).text =
+                String.format("%.2f", totalKg) // Format with 2 decimal places
+            tableRow.findViewById<TextView>(R.id.kgPriceTextView).text =
+                String.format("৳ %.2f", pricePerKg)
+            tableRow.findViewById<TextView>(R.id.totalPriceTextView).text =
+                String.format("৳ %.2f", itemTotalPrice)
             tableLayout.addView(tableRow)
         }
 
-        val tableRowFinal = LayoutInflater.from(this).inflate(R.layout.table_row_final, null) as TableRow
+        val tableRowFinal =
+            LayoutInflater.from(this).inflate(R.layout.table_row_final, null) as TableRow
 
-        tableRowFinal.findViewById<TextView>(R.id.totalPriceTextView).text = String.format("৳ %.2f", totalPrice)
+        tableRowFinal.findViewById<TextView>(R.id.totalPriceTextView).text =
+            String.format("৳ %.2f", totalPrice)
         tableLayout.addView(tableRowFinal)
 
         btnBack.setOnClickListener {
