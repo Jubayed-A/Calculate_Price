@@ -17,7 +17,6 @@ class PriceMenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_price_menu)
 
-
         val tableLayout = findViewById<TableLayout>(R.id.tableLayout)
         val btnBack = findViewById<Button>(R.id.btnBack)
 
@@ -59,7 +58,6 @@ tableLayout.addView(tableRow)*/
             tableLayout.addView(tableRow)
         }
 
-
         val tableRowFinal = LayoutInflater.from(this).inflate(R.layout.table_row_final, null) as TableRow
 
         tableRowFinal.findViewById<TextView>(R.id.totalPriceTextView).text = String.format("৳ %.2f", totalPrice)
@@ -70,7 +68,6 @@ tableLayout.addView(tableRow)*/
             finish()
             startActivity(intent)
         }
-
 
     }
 }
