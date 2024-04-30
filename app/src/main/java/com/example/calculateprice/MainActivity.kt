@@ -22,12 +22,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         recyclerView = findViewById(R.id.recyclerView)
         fabAddItem = findViewById(R.id.btnAdd)
         fabRemoveItem = findViewById(R.id.btnRemove)
         val btnCalculate = findViewById<Button>(R.id.btnCalculated)
-
 
         adapter = CalculateAdapter(mutableListOf())
         recyclerView.adapter = adapter
@@ -116,7 +114,5 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
     }
-
 }
