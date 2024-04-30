@@ -21,6 +21,5 @@ class SplashScreenActivity : AppCompatActivity() {
             finish() // Finish the splash activity so the user can't go back to it
         }, 2000)
 
-
     }
 }
