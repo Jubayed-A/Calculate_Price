@@ -20,19 +20,6 @@ class PriceMenuActivity : AppCompatActivity() {
         val tableLayout = findViewById<TableLayout>(R.id.tableLayout)
         val btnBack = findViewById<Button>(R.id.btnBack)
 
-        // Retrieve data from the intent
-        /*val itemName = intent.getStringExtra("itemName")
-        val itemKg = intent.getIntExtra("itemKg", 0)
-        val itemGram = intent.getIntExtra("itemGram", 0)
-        val itemPricePerKg = intent.getIntExtra("itemPricePerKg", 0)
-        val totalPrice = intent.getDoubleExtra("totalPrice", 0.0)*/
-
-        /*val tableRow = LayoutInflater.from(this).inflate(R.layout.table_row, null) as TableRow
-tableRow.findViewById<TextView>(R.id.nameTextView).text = itemName
-tableRow.findViewById<TextView>(R.id.totalKgTextView).text = "${itemKg}.${itemGram}"
-tableRow.findViewById<TextView>(R.id.kgPriceTextView).text = itemPricePerKg.toString()
-tableRow.findViewById<TextView>(R.id.totalPriceTextView).text = totalPrice.toString()
-tableLayout.addView(tableRow)*/
 
 
         // Retrieve all item data from the intent (using Double for weight)
