@@ -70,6 +70,7 @@ class CalculateAdapter(private var items: MutableList<CalculateList>) :
         if (items.isNotEmpty()) {
             items.removeAt(items.size - 1)
             notifyItemRemoved(items.size)
+            notifyDataSetChanged()
         }
     }
 
