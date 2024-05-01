@@ -18,7 +18,7 @@ class SplashScreenActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             // Start your main activity here
             startActivity(Intent(this, MainActivity::class.java))
-            finish() // Finish the splash activity so the user can't go back to it
+            finish()
         }, 2000)
 
     }
