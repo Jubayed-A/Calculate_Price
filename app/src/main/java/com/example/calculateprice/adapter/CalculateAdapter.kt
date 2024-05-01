@@ -1,4 +1,4 @@
-package com.example.calculateprice
+package com.example.calculateprice.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.widget.addTextChangedListener
 import androidx.recyclerview.widget.RecyclerView
+import com.example.calculateprice.R
+import com.example.calculateprice.data.CalculateList
 import com.google.android.material.textfield.TextInputEditText
 
 class CalculateAdapter(private var items: MutableList<CalculateList>) :

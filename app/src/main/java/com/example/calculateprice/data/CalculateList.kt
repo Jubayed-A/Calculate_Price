@@ -1,4 +1,4 @@
-package com.example.calculateprice
+package com.example.calculateprice.data
 
 data class CalculateList(
     val name: String,
