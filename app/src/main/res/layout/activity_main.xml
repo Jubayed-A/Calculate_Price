@@ -8,7 +8,7 @@
     app:cardCornerRadius="10dp"
     app:strokeColor="#4C8BC6"
     app:strokeWidth="4dp"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
